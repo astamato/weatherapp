@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">weatherapp</string>
+    <string name="changeUnit">Change Units</string>
+    <string name="actionRefresh">Refresh</string>
+    <string name="addNewCity">ADD NEW CITY</string>
+    <string name="title_activity_weather_app_main">WeatherNOW!</string>
+    <string name="snackBarDismiss">DISMISS</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="troubleLoading">Ups! There was trouble loading\u0020</string>
+    <string name="removedCity">You\'ve removed:\u0020</string>
+    <string name="cityChooserHint">Insert first 3 letters</string>
+    <string name="changeUnitComingSoon">Coming soon!</string>
+    <string name="errorGettingCities">Ups! There was trouble loading cities!</string>
+    <string name="alreadyStoredCity">This city is already in favourites:\u0020</string>
+    <string name="problemWithCity">We couldn\'t add the selected city! Try again later!</string>
+    <string name="progressBarLoading">Loading weather...</string>
+
+    <!-- Labels for weather card -->
+    <string name="labelPressure">Pressure</string>
+    <string name="labelHumidity">Humidity</string>
+    <string name="labelDate">Date</string>
+    <string name="labelWeatherDay">Temp</string>
+    <string name="labelWeatherMax">Max</string>
+    <string name="labelWeatherMin">Min</string>
+
+    <!-- CSV errors-->
+    <string name="csvCouldNotRead">Error in reading CSV file:\u0020</string>
+    <string name="csvCouldNotClose">Error while closing input stream:\u0020</string>
+
+</resources>
