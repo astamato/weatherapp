@@ -16,16 +16,12 @@ import java.util.List;
 
 public class CitiesCustomAutocompleteAdapter extends ArrayAdapter<City> {
 
-	private List<City> items, tempItems, suggestions;
+	private List<City> tempItems, suggestions;
 	private Context context;
-	private int resource, textViewResourceId;
 
 	public CitiesCustomAutocompleteAdapter(Context context, int resource, int textViewResourceId, List<City> items) {
 		super(context, resource, textViewResourceId, items);
 		this.context = context;
-		this.resource = resource;
-		this.textViewResourceId = textViewResourceId;
-		this.items = items;
 		tempItems = new ArrayList<>(items); // this makes the difference.
 		suggestions = new ArrayList<>();
 	}
@@ -37,7 +33,7 @@ public class CitiesCustomAutocompleteAdapter extends ArrayAdapter<City> {
 			LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			view = inflater.inflate(R.layout.row_city, parent, false);
 		}
-		City cities = items.get(position);
+		City cities = getItem(position);
 		if (cities != null) {
 			TextView lblName = (TextView)view.findViewById(R.id.lbl_name);
 			if (lblName != null)
@@ -83,17 +79,19 @@ public class CitiesCustomAutocompleteAdapter extends ArrayAdapter<City> {
 
 		@Override
 		protected void publishResults(CharSequence constraint, FilterResults results) {
-			List<City> filterList = (ArrayList<City>)results.values;
+			ArrayList<City> filteredList = (ArrayList<City>)results.values;
+			ArrayList<City> cityList = new ArrayList<>();
 			if (results != null && results.count > 0) {
 				clear();
-				List list = new ArrayList<>();
-				Iterator<City> iterator = filterList.iterator();
-				while(iterator.hasNext()){ //java.util.ConcurrentModificationException if for loop used
-					//java.util.ConcurrentModificationException with adding to not thread safe collection
-					list.add(iterator.next());
-					notifyDataSetChanged();
+				for (City c : filteredList) {
+					cityList.add(c);
 				}
-				addAll(list);
+				Iterator<City> customerIterator = cityList.iterator();
+				while (customerIterator.hasNext()) {
+					City cityToAdd = customerIterator.next();
+					add(cityToAdd);
+				}
+				notifyDataSetChanged();
 			}
 		}
 	};
