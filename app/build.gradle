@@ -1,21 +1,19 @@
 apply plugin: 'com.android.application'
-
-def supportVersion = "23.2.1"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.challenge.weatherapp"
-        minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 21
+        targetSdkVersion 29
         multiDexEnabled true
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,20 +24,16 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta04'
 
-    compile 'com.android.support:appcompat-v7:' + supportVersion
-    compile 'com.android.support:support-v4:' + supportVersion
-    compile 'com.android.support:design:' + supportVersion
-    compile 'com.android.support:cardview-v7:' + supportVersion
-    compile 'com.android.support:recyclerview-v7:' + supportVersion
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.brnunes:swipeablerecyclerview:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
 
-    compile 'com.squareup.retrofit2:retrofit:2.0.1'
-    compile 'com.google.code.gson:gson:2.6.2'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.brnunes:swipeablerecyclerview:1.0.2'
-
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
