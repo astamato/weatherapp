@@ -9,13 +9,19 @@ It's very old and needs to be redone :)
 ## Uses
 
 Retrofit
+
 Picasso
+
 Volley
 
 ## Misses
 
 Proper architecture.
-DI framework (koin or Dagger 2)
+
+DI framework (Koin or Dagger 2)
+
 I'd also migrate Volley to OkHttp.
+
 Kotlin.
+
 Tests.
