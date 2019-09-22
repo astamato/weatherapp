@@ -1,8 +1,21 @@
-# Weather App
-
-Proof of concept app.
+# Weather App 0.1
 
 April 2016
 
-Uses Retrofit.
-Uses Picasso.
+Proof of concept app (code challenge).
+This project was very useful as a playground to learn to work with tools listed below.
+It's very old and needs to be redone :)
+
+## Uses
+
+Retrofit
+Picasso
+Volley
+
+## Misses
+
+Proper architecture.
+DI framework (koin or Dagger 2)
+I'd also migrate Volley to OkHttp.
+Kotlin.
+Tests.

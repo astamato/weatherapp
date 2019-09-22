@@ -3,17 +3,17 @@
     <string name="changeUnit">Change Units</string>
     <string name="actionRefresh">Refresh</string>
     <string name="addNewCity">ADD NEW CITY</string>
-    <string name="title_activity_weather_app_main">WeatherNOW!</string>
+    <string name="title_activity_weather_app_main">Weather NOW</string>
     <string name="snackBarDismiss">DISMISS</string>
     <string name="dismiss">DISMISS</string>
     <string name="troubleLoading">Ups! There was trouble loading\u0020</string>
-    <string name="removedCity">You\'ve removed:\u0020</string>
+    <string name="removedCity">You\'ve removed: \u0020</string>
     <string name="cityChooserHint">Insert first 3 letters</string>
     <string name="changeUnitComingSoon">Coming soon!</string>
     <string name="errorGettingCities">Ups! There was trouble loading cities!</string>
     <string name="alreadyStoredCity">This city is already in favourites:\u0020</string>
     <string name="problemWithCity">We couldn\'t add the selected city! Try again later!</string>
-    <string name="progressBarLoading">Loading weather...</string>
+    <string name="progressBarLoading">Loading weather…</string>
 
     <!-- Labels for weather card -->
     <string name="labelPressure">Pressure</string>

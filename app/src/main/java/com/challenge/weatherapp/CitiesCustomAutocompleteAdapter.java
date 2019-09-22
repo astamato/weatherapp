@@ -19,7 +19,7 @@ public class CitiesCustomAutocompleteAdapter extends ArrayAdapter<City> {
 	private List<City> tempItems, suggestions;
 	private Context context;
 
-	public CitiesCustomAutocompleteAdapter(Context context, int resource, int textViewResourceId, List<City> items) {
+	CitiesCustomAutocompleteAdapter(Context context, int resource, int textViewResourceId, List<City> items) {
 		super(context, resource, textViewResourceId, items);
 		this.context = context;
 		tempItems = new ArrayList<>(items); // this makes the difference.

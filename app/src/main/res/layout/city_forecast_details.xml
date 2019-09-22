@@ -20,5 +20,4 @@
             android:scrollbars="vertical" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-
 </LinearLayout>

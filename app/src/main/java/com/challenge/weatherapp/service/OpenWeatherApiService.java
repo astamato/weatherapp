@@ -12,7 +12,7 @@ import retrofit2.http.Query;
 
 public interface OpenWeatherApiService {
 
-	public static String BASE_URL = "http://api.openweathermap.org/";
+	String BASE_URL = "http://api.openweathermap.org/";
 
 	@GET("data/2.5/forecast/daily")
 	Call<ForecastDaily> getForecastDaily(@Query("appid") String appid,
@@ -35,7 +35,7 @@ public interface OpenWeatherApiService {
 	);
 
 
-	public static final Retrofit retrofit = new Retrofit.Builder()
+	Retrofit retrofit = new Retrofit.Builder()
 			.baseUrl(BASE_URL)
 			.addConverterFactory(GsonConverterFactory.create())
 			.build();
